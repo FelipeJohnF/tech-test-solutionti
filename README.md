@@ -2,9 +2,7 @@
 
 ## API utilizando JAVA + SpringBoot + JWT Token
 
-Esclareço desde já que realizei o desenvolvimento da API com auxílio de inteligência artificial, principalmente na parte da integração com JWT. No momento, os endpoints de consulta de usuário e endereços estão funcionando corretamente. O principal problema foi a integração com o FrontEnd; deste modo, o projeto que desenvolvi é possível apenas analisar o código em si.
-
-Foi realizado o desenvolvimento na arquitetura Service + Controller + DTO seguindo as convenções padrões.
+Foi realizado o desenvolvimento na arquitetura Service + Controller + DTO seguindo as convenções padrões. No momento, os endpoints de consulta de usuário e endereços estão funcionando corretamente. O principal problema foi a integração com o FrontEnd; deste modo, o projeto que desenvolvi é possível apenas analisar o código em si.
 
 ## Execução dos Endpoints
 
@@ -12,11 +10,13 @@ Para execução do endpoint basta:
 
 ```bash
 ./mvnw spring-boot:run
+```
 
 Caso ocorra falha de permissão de execução (Linux)
 
 ```bash
   chmod +x mvnw
+```
 
 ## Para database
 
