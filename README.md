@@ -1,4 +1,3 @@
-```markdown
 # Java API
 
 ## API utilizando JAVA + SpringBoot + JWT Token
