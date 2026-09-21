@@ -3,7 +3,6 @@ package com.solutionti.testetecnico.entity;
 import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
 
-import java.time.Instant;
 import java.time.LocalDate;
 
 
@@ -34,7 +33,7 @@ public class User {
 
     @CreationTimestamp
     @Column(name="createdat", nullable = false, updatable = false)
-    private Instant createdAt;
+    private LocalDate createdAt;
 
     public Long getId(){
         return  this.id;
@@ -80,7 +79,7 @@ public class User {
         this.role = role;
     }
 
-    public Instant getCreatedAt(){
+    public LocalDate getCreatedAt(){
         return this.createdAt;
     }
 }

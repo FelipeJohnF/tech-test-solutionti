@@ -8,8 +8,8 @@ public record UserDTO (
         String nome,
         String cpf,
         LocalDate dataNascimento,
-        String senha,
+        String senha, // REMOVER!!!
         String role,
-        Instant createdAt
+        LocalDate createdAt
 
 ){}

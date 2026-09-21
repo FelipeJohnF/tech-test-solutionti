@@ -2,40 +2,31 @@ package com.solutionti.testetecnico.controller;
 
 import com.solutionti.testetecnico.dto.LoginRequestDTO;
 import com.solutionti.testetecnico.dto.LoginResponseDTO;
-import com.solutionti.testetecnico.service.JwtService;
+import com.solutionti.testetecnico.dto.SignupRequestDTO;
+import com.solutionti.testetecnico.service.AuthService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("/api/auth")
 public class AuthController {
 
-    private final AuthenticationManager authenticationManager;
-    private final JwtService jwtService;
+    private final AuthService authService;
 
-    public AuthController(AuthenticationManager authenticationManager, JwtService jwtService){
-        this.authenticationManager = authenticationManager;
-        this.jwtService = jwtService;
-
+    public AuthController(AuthService authService) {
+        this.authService = authService;
     }
 
     @PostMapping("/login")
     public ResponseEntity<LoginResponseDTO> login(@RequestBody LoginRequestDTO loginRequestDTO) {
-        Authentication authentication = authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(loginRequestDTO.getCpf(), loginRequestDTO.getSenha())
+        return ResponseEntity.ok(authService.login(loginRequestDTO));
+    }
 
-        );
-
-        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
-        String token = jwtService.generateToken(userDetails);
-
-        return ResponseEntity.ok(new LoginResponseDTO(token));
+    @PostMapping("/signup")
+    public ResponseEntity<LoginResponseDTO> signup(@RequestBody SignupRequestDTO signupDTO) {
+        return ResponseEntity.ok(authService.signup(signupDTO));
     }
 }
