@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public record EnderecoDTO(
          Long id,
          Long userId,
-         Long cep,
+         String cep,
          String logradouro,
          String numero,
          String bairro,

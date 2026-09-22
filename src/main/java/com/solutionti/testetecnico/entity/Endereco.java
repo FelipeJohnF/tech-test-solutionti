@@ -21,7 +21,7 @@ public class Endereco {
     private User user;
 
     @Column(nullable = false, length = 8)
-    private Long cep;
+    private String cep;
 
     @Column(length = 20)
     private String numero;
@@ -62,11 +62,11 @@ public class Endereco {
         this.user = user;
     }
 
-    public Long getCep() {
+    public String getCep() {
         return cep;
     }
 
-    public void setCep(Long cep) {
+    public void setCep(String cep) {
         this.cep = cep;
     }
 
