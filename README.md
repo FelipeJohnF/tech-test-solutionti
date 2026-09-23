@@ -22,7 +22,8 @@ Caso ocorra falha de permissão de execução (Linux)
 
 Necessário a criação de um database no postgres, e após realizar a execução do arquivo em DATABASE/database.sql.
 
-Necessário apontar também apontar a API para o database, será ainda hoje realizado o upload do .env.example
+Necessário apontar alterar o arquivo em src/main/resources/application.properties para os valores correspondentes.
+
 
 ## Problemas
 
