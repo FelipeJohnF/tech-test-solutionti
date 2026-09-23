@@ -24,6 +24,6 @@ Necessário a criação de um database no postgres, e após realizar a execuçã
 
 ## Problemas
 
-O principal problema foi no momento em que realizei a integração com o JWT, a falta da funcionabilidade de login / signup foi o que comprometeu a visualização das funcionalidades, no momento é possível criar um usuário manualmente com o hash da senha ocorrendo em bcrypt, porém não há certeza de que o endpoint de login funcionará.
+No momento nem todas as funcionalidades estão ativas, necessário ainda a utilização da API ViaCEP e da adição de um botão para que um usuário "STANDARD" consiga realizar o cadastro de um endereço.
 
-O projeto havia tempo o sufuciente para ser desenvolvido, porém diante da minha disponibilidade não consegui completar todos em requisitos. Que fique claro que eu compreendo que o código não é entregável em circuntâncias comerciais e etc.
+Estou aos poucos iterando as novas funcionalidades. O projeto havia tempo o sufuciente para ser desenvolvido, porém diante da minha disponibilidade não consegui completar todos em requisitos.
