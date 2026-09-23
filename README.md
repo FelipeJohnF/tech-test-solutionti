@@ -20,7 +20,9 @@ Caso ocorra falha de permissão de execução (Linux)
 
 ## Para database
 
-Necessário a criação de um database no postgres, e após realizar a execução do arquivo em DATABASE/database.sql
+Necessário a criação de um database no postgres, e após realizar a execução do arquivo em DATABASE/database.sql.
+
+Necessário apontar também apontar a API para o database, será ainda hoje realizado o upload do .env.example
 
 ## Problemas
 
